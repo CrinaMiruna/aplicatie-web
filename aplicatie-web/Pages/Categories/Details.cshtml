@@ -1,0 +1,31 @@
+﻿@page
+@model aplicatie_web.Pages.Categories.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProgramareCategory</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgramareCategory.Programare)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgramareCategory.Programare.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgramareCategory.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgramareCategory.Category.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ProgramareCategory.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
